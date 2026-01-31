@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drywall Calculator - Free Sheetrock & Materials Estimator</title>
+  <meta name="description" content="Free drywall calculator to estimate sheets needed, material costs, joint compound, screws, and tape. Calculate for walls and ceilings with waste factor.">
+  <link rel="canonical" href="https://drywallcalculator.net/">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <meta property="og:title" content="Drywall Calculator - Free Sheetrock & Materials Estimator">
+  <meta property="og:description" content="Free drywall calculator to estimate sheets needed, material costs, joint compound, screws, and tape. Calculate for walls and ceilings with waste factor.">
+  <meta property="og:url" content="https://drywallcalculator.net/">
+  <meta property="og:image" content="https://drywallcalculator.net/assets/images/og-image.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Drywall Calculator">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://drywallcalculator.net/#website",
+        "name": "Drywall Calculator",
+        "url": "https://drywallcalculator.net/",
+        "description": "Free drywall calculator to estimate sheets needed, material costs, joint compound, screws, and tape for walls and ceilings.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://drywallcalculator.net/blog/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://drywallcalculator.net/#organization",
+        "name": "Drywall Calculator",
+        "url": "https://drywallcalculator.net/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://drywallcalculator.net/assets/images/favicon/apple-touch-icon.png",
+          "width": 180,
+          "height": 180
+        },
+        "sameAs": []
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://drywallcalculator.net/#webapp",
+        "name": "Drywall Calculator",
+        "description": "Calculate drywall sheets, costs, joint compound, screws, and tape for your construction project. Works for walls, ceilings, or both with adjustable waste factor.",
+        "url": "https://drywallcalculator.net/",
+        "applicationCategory": "CalculatorApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Drywall sheet calculator",
+          "Material cost estimator",
+          "Joint compound calculator",
+          "Screw quantity calculator",
+          "Tape calculator",
+          "Multiple sheet sizes (4x8, 4x10, 4x12)",
+          "Adjustable waste factor"
+        ],
+        "publisher": {
+          "@id": "https://drywallcalculator.net/#organization"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://drywallcalculator.net/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://drywallcalculator.net/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calculator"
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://drywallcalculator.net/#howto",
+        "name": "How to Calculate Drywall Sheets Needed",
+        "description": "Step-by-step guide to calculating how many drywall sheets you need for your room using the drywall calculator.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Measure room dimensions",
+            "text": "Measure your room's length, width, and ceiling height in feet using a tape measure."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Enter dimensions",
+            "text": "Input your room length, width, and ceiling height into the calculator fields."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Select coverage areas",
+            "text": "Check Walls if covering walls, Ceiling if covering the ceiling, or both."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Count openings",
+            "text": "Enter the number of doors (21 sq ft each) and windows (15 sq ft each). Use the Other field for additional openings."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Choose sheet size",
+            "text": "Select 4x8 (32 sq ft), 4x10 (40 sq ft), or 4x12 (48 sq ft) based on your project needs."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 6,
+            "name": "Set waste factor",
+            "text": "Adjust the waste factor slider (5-20%) based on room complexity. Use 10% for standard rooms."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 7,
+            "name": "Calculate results",
+            "text": "Click Calculate Sheets Needed to see total sheets, shopping list, and material estimates."
+          }
+        ],
+        "tool": [
+          {
+            "@type": "HowToTool",
+            "name": "Tape measure"
+          }
+        ],
+        "totalTime": "PT5M"
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://drywallcalculator.net/#guides",
+        "name": "Drywall Guides and Resources",
+        "description": "In-depth guides for drywall installation, materials, and costs.",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "url": "https://drywallcalculator.net/blog/how-to-calculate-drywall-square-footage/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "url": "https://drywallcalculator.net/blog/drywall-installation-cost-guide/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "url": "https://drywallcalculator.net/blog/how-much-joint-compound-do-i-need/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "url": "https://drywallcalculator.net/blog/drywall-finish-levels-explained/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "url": "https://drywallcalculator.net/blog/drywall-sheet-sizes-guide/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "url": "https://drywallcalculator.net/blog/drywall-screw-spacing-guide/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "url": "https://drywallcalculator.net/blog/hanging-drywall-on-ceiling-tips/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "url": "https://drywallcalculator.net/blog/home-depot-vs-lowes-drywall-prices/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://drywallcalculator.net/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How many sheets for a 12×12 room?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "About 17-18 sheets (4'×8') for walls and ceiling with 10% waste. Walls = 384 sq ft, ceiling = 144 sq ft, total = 528 sq ft. With 10% waste = 581 sq ft ÷ 32 = 18 sheets."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does drywall cost per sq ft?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Materials cost $0.30-$0.50 per square foot for standard 1/2 inch drywall, compound, screws, and tape. Professional installation adds $1.50-$3.00 per square foot for labor, depending on finish level and region."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much joint compound do I need?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Plan for about 1 gallon per 100 sq ft for a standard 3-coat finish. A 5-gallon bucket covers 400-500 sq ft. All-Purpose compound works for most DIY projects."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many screws per sheet of drywall?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "28-32 screws per 4'×8' sheet with 16 inch on-center stud spacing. Place screws 8 inches apart on edges and 12 inches apart in the field. With 24 inch stud spacing, you'll use about 24 screws per sheet."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I use 1/2 inch or 5/8 inch drywall for ceilings?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use 1/2 inch drywall for ceilings with 16 inch on-center joists. For 24 inch joist spacing, use 5/8 inch to prevent sagging. Fire-rated Type X (5/8 inch) is required for garage ceilings in most jurisdictions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between drywall and sheetrock?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sheetrock is a brand name owned by USG Corporation, while drywall is the generic term for gypsum wallboard. They're functionally identical—Sheetrock is simply the most recognized brand, similar to how Kleenex refers to tissues."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What finish level do I need?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most homes use Level 4 (standard smooth finish) for living areas. Level 3 is acceptable for textured walls or behind cabinets. Level 5 is needed for high-gloss paint or areas with critical lighting. Garages often use Level 2."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I repair damaged drywall?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Small holes (under 6 inches) can be patched with mesh tape and compound. Larger damage requires cutting out the damaged section and installing a new piece. Water damage often requires removing to the studs and replacing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which drywall sheet size should I use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "4'×8' sheets are best for DIYers—they're lighter (54 lbs) and easier to maneuver. 4'×12' sheets create fewer seams but weigh 81+ lbs and usually need two people. For 9' or 10' ceilings, 4'×10' sheets can eliminate horizontal seams."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where can I get the best price on drywall?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Big box stores (Home Depot, Lowes) offer competitive prices and convenience. Building supply yards often have better bulk pricing. Always compare per-sheet prices and check for delivery fees—drywall is heavy and fragile."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">
+          <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+          <span>Drywall Calculator</span>
+        </a>
+        <nav class="nav-desktop">
+          <a href="/" class="active">Calculator</a>
+          <a href="/blog/">Articles</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      </div>
+      <nav class="nav-mobile">
+        <a href="/">Calculator</a>
+        <a href="/blog/">Articles</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container content-narrow">
+      <h1>Drywall Calculator</h1>
+      <p class="intro-text">Instantly calculate how many drywall sheets you need for any room, plus joint compound, screws, and tape quantities. This free calculator uses industry-standard formulas to estimate materials for walls, ceilings, or both—helping you avoid costly trips back to the store or running short mid-project.</p>
+      <p class="last-updated" style="font-size:0.875rem;color:var(--gray-500);margin-bottom:1.5rem">Last updated: January 2026</p>
+
+      <div class="key-takeaways" style="background:var(--gray-50);border-left:4px solid var(--primary-color);padding:1.25rem 1.5rem;border-radius:0.5rem;margin-bottom:2rem">
+        <h3 style="margin:0 0 0.75rem 0;font-size:1rem;color:var(--gray-900)">Quick Estimates at a Glance</h3>
+        <ul style="margin:0;padding-left:1.25rem;color:var(--gray-700)">
+          <li><strong>12×12 room:</strong> ~17 sheets (4'×8') for walls + ceiling</li>
+          <li><strong>Material cost:</strong> $0.30-$0.50/sq ft DIY, $1.50-$3.00/sq ft professional</li>
+          <li><strong>Joint compound:</strong> 1 gallon per 100 sq ft (3 coats)</li>
+          <li><strong>Screws:</strong> ~32 per 4'×8' sheet (16" OC studs)</li>
+        </ul>
+      </div>
+
+      <div class="calculator-card">
+        <div class="calc-tabs">
+          <button class="calc-tab active" data-tab="sheets"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="3" y="3" width="18" height="18" rx="2"/></svg><span class="calc-tab-label">Sheets</span></button>
+          <button class="calc-tab" data-tab="cost"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span class="calc-tab-label">Cost</span></button>
+          <button class="calc-tab" data-tab="mud"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="12" cy="12" r="10"/></svg><span class="calc-tab-label">Mud</span></button>
+          <button class="calc-tab" data-tab="screws"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="12" cy="12" r="3"/></svg><span class="calc-tab-label">Screws</span></button>
+          <button class="calc-tab" data-tab="tape"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/></svg><span class="calc-tab-label">Tape</span></button>
+        </div>
+        
+        <!-- SHEETS PANEL -->
+        <div id="panel-sheets" class="calc-panel active">
+          <div class="form-grid">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="room-length">Room Length</label>
+                <div class="input-with-unit"><input type="number" id="room-length" class="form-input" value="12" min="1" max="100"><span class="input-unit">ft</span></div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="room-width">Room Width</label>
+                <div class="input-with-unit"><input type="number" id="room-width" class="form-input" value="10" min="1" max="100"><span class="input-unit">ft</span></div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="ceiling-height">Ceiling Height</label>
+                <div class="input-with-unit"><input type="number" id="ceiling-height" class="form-input" value="8" min="6" max="20"><span class="input-unit">ft</span></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Coverage</label>
+              <div class="checkbox-group">
+                <label class="checkbox-wrapper"><input type="checkbox" id="include-walls" checked><span class="checkbox-label">Walls</span></label>
+                <label class="checkbox-wrapper"><input type="checkbox" id="include-ceiling" checked><span class="checkbox-label">Ceiling</span></label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="doors">Doors (21 sq ft ea)</label>
+                <input type="number" id="doors" class="form-input" value="2" min="0" max="20">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="windows">Windows (15 sq ft ea)</label>
+                <input type="number" id="windows" class="form-input" value="1" min="0" max="20">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="other-openings">Other (sq ft)</label>
+                <input type="number" id="other-openings" class="form-input" value="0" min="0">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Sheet Size</label>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="sheet-size" value="4x8" checked><span>4'×8' (32 sq ft)</span></label>
+                <label class="radio-option"><input type="radio" name="sheet-size" value="4x10"><span>4'×10' (40 sq ft)</span></label>
+                <label class="radio-option"><input type="radio" name="sheet-size" value="4x12"><span>4'×12' (48 sq ft)</span></label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Waste Factor</label>
+              <div class="range-input-group"><input type="range" id="waste-factor" class="range-slider" min="5" max="20" value="10"><div class="range-value"><span id="waste-value">10</span>%</div></div>
+            </div>
+          </div>
+          <button class="calculate-btn" id="calc-sheets-btn">Calculate Sheets Needed</button>
+          <div class="results-section" id="sheets-results">
+            <div class="result-primary">
+              <div class="result-label">Drywall Sheets Needed</div>
+              <div class="result-value" id="total-sheets">--</div>
+              <div class="result-sublabel" id="sheet-size-label">4'×8' sheets</div>
+            </div>
+
+            <!-- Area Breakdown Bar -->
+            <div class="material-breakdown">
+              <h4>Area Breakdown</h4>
+              <div class="breakdown-bar">
+                <div class="breakdown-segment walls" id="bar-walls" style="width:70%">Walls</div>
+                <div class="breakdown-segment ceiling" id="bar-ceiling" style="width:25%">Ceiling</div>
+                <div class="breakdown-segment waste" id="bar-waste" style="width:5%"></div>
+              </div>
+              <div class="breakdown-legend">
+                <span><span class="legend-dot walls"></span>Walls: <strong id="legend-walls">--</strong></span>
+                <span><span class="legend-dot ceiling"></span>Ceiling: <strong id="legend-ceiling">--</strong></span>
+                <span><span class="legend-dot waste"></span>Waste (+<span id="legend-waste-pct">10</span>%): <strong id="legend-waste">--</strong></span>
+              </div>
+            </div>
+
+            <div class="results-grid">
+              <div class="result-item"><div class="result-item-label">Wall Area</div><div class="result-item-value" id="wall-area">--</div><div class="result-item-label" id="wall-sheets">(--)</div></div>
+              <div class="result-item"><div class="result-item-label">Ceiling Area</div><div class="result-item-value" id="ceiling-area">--</div><div class="result-item-label" id="ceiling-sheets">(--)</div></div>
+              <div class="result-item"><div class="result-item-label">Total</div><div class="result-item-value" id="total-area">--</div><div class="result-item-label" id="waste-note">+10%</div></div>
+            </div>
+
+            <div class="materials-list"><h4>Shopping List</h4><ul>
+              <li><span class="material-name">Drywall Sheets</span><span class="material-qty" id="mat-sheets">--</span></li>
+              <li><span class="material-name">Joint Compound</span><span class="material-qty" id="mat-mud">--</span></li>
+              <li><span class="material-name">Drywall Tape</span><span class="material-qty" id="mat-tape">--</span></li>
+              <li><span class="material-name">Screws</span><span class="material-qty" id="mat-screws">--</span></li>
+            </ul></div>
+
+            <!-- Formula Details -->
+            <div class="formula-details">
+              <button class="formula-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                Show calculation formula
+              </button>
+              <div class="formula-content" id="sheets-formula">
+                Wall Area = 2 × (Length + Width) × Height<br>
+                Ceiling Area = Length × Width<br>
+                Openings = (Doors × 21) + (Windows × 15) + Other<br>
+                Net Area = Wall Area - Openings + Ceiling Area<br>
+                Total = Net Area × (1 + Waste%)<br>
+                Sheets = ⌈Total ÷ Sheet Size⌉
+              </div>
+            </div>
+
+            <button class="print-btn" onclick="window.print()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              Print Results
+            </button>
+          </div>
+        </div>
+        
+        <!-- COST PANEL -->
+        <div id="panel-cost" class="calc-panel">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="cost-sqft">Square Footage</label>
+              <div class="input-with-unit"><input type="number" id="cost-sqft" class="form-input" value="400" min="10"><span class="input-unit">sq ft</span></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Project Type</label>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="project-type" value="diy" checked><span>DIY (materials only)</span></label>
+                <label class="radio-option"><input type="radio" name="project-type" value="professional"><span>Professional install</span></label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Finish Level</label>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="finish-level" value="basic"><span>Level 0-2 (basic)</span></label>
+                <label class="radio-option"><input type="radio" name="finish-level" value="standard" checked><span>Level 3 (standard)</span></label>
+                <label class="radio-option"><input type="radio" name="finish-level" value="smooth"><span>Level 4 (smooth)</span></label>
+                <label class="radio-option"><input type="radio" name="finish-level" value="premium"><span>Level 5 (premium)</span></label>
+              </div>
+            </div>
+          </div>
+          <button class="calculate-btn" id="calc-cost-btn">Estimate Costs</button>
+          <div class="results-section" id="cost-results">
+            <div class="result-primary">
+              <div class="result-label">Estimated Total Cost</div>
+              <div class="result-value" id="cost-total-main">$--</div>
+              <div class="result-sublabel" id="cost-per-sqft-main">$-- per sq ft</div>
+            </div>
+
+            <!-- Cost Breakdown Bar -->
+            <div class="material-breakdown">
+              <h4>Cost Breakdown</h4>
+              <div class="breakdown-bar">
+                <div class="breakdown-segment walls" id="bar-materials" style="width:50%">Materials</div>
+                <div class="breakdown-segment ceiling" id="bar-labor" style="width:50%">Labor</div>
+              </div>
+              <div class="breakdown-legend">
+                <span><span class="legend-dot walls"></span>Materials: <strong id="legend-materials">$--</strong></span>
+                <span><span class="legend-dot ceiling"></span>Labor: <strong id="legend-labor">$--</strong></span>
+              </div>
+            </div>
+
+            <div class="cost-breakdown">
+              <div class="cost-row"><span class="cost-label">Drywall Sheets</span><span class="cost-value" id="cost-sheets">$--</span></div>
+              <div class="cost-row"><span class="cost-label">Joint Compound</span><span class="cost-value" id="cost-mud-detail">$--</span></div>
+              <div class="cost-row"><span class="cost-label">Tape</span><span class="cost-value" id="cost-tape-detail">$--</span></div>
+              <div class="cost-row"><span class="cost-label">Screws</span><span class="cost-value" id="cost-screws-detail">$--</span></div>
+              <div class="cost-row"><span class="cost-label"><strong>Materials Subtotal</strong></span><span class="cost-value" id="cost-materials">$--</span></div>
+              <div class="cost-row" id="labor-row"><span class="cost-label"><strong>Labor</strong></span><span class="cost-value" id="cost-labor">$--</span></div>
+              <div class="cost-row total"><span class="cost-label">Total Estimate</span><span class="cost-value" id="cost-total">$--</span></div>
+            </div>
+            <p class="text-center mt-1" id="cost-per-sqft" style="color:var(--gray-600);">$-- per sq ft</p>
+
+            <!-- What This Means -->
+            <div class="interpretation-box" id="cost-interpretation">
+              <h4>What This Means</h4>
+              <p id="cost-interpretation-text">Enter your project details and calculate to see cost insights.</p>
+            </div>
+
+            <button class="print-btn" onclick="window.print()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              Print Results
+            </button>
+          </div>
+        </div>
+        
+        <!-- MUD PANEL -->
+        <div id="panel-mud" class="calc-panel">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="mud-sqft">Square Footage</label>
+              <div class="input-with-unit"><input type="number" id="mud-sqft" class="form-input" value="400" min="10"><span class="input-unit">sq ft</span></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Compound Type</label>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="mud-type" value="allPurpose" checked><span>All-Purpose</span></label>
+                <label class="radio-option"><input type="radio" name="mud-type" value="topping"><span>Topping</span></label>
+                <label class="radio-option"><input type="radio" name="mud-type" value="setting"><span>Setting</span></label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Coats</label>
+              <div class="range-input-group"><input type="range" id="coats" class="range-slider" min="1" max="5" value="3"><div class="range-value"><span id="coats-value">3</span></div></div>
+            </div>
+          </div>
+          <button class="calculate-btn" id="calc-mud-btn">Calculate Compound</button>
+          <div class="results-section" id="mud-results">
+            <div class="result-primary">
+              <div class="result-label">Joint Compound Needed</div>
+              <div class="result-value" id="mud-total">--</div>
+              <div class="result-sublabel" id="mud-per-coat">(-- per coat)</div>
+            </div>
+
+            <!-- Coverage Bar -->
+            <div class="material-breakdown">
+              <h4>Coverage by Coat</h4>
+              <div class="breakdown-bar" id="mud-coats-bar">
+                <div class="breakdown-segment walls" style="width:33%">Coat 1</div>
+                <div class="breakdown-segment ceiling" style="width:33%">Coat 2</div>
+                <div class="breakdown-segment waste" style="width:34%">Coat 3</div>
+              </div>
+              <div class="breakdown-legend">
+                <span>Each coat: <strong id="mud-gal-per-coat">--</strong></span>
+              </div>
+            </div>
+
+            <div class="materials-list">
+              <h4>What to Buy</h4>
+              <ul>
+                <li><span class="material-name" id="mud-type-label">All-Purpose</span><span class="material-qty" id="mud-buckets">--</span></li>
+              </ul>
+            </div>
+
+            <!-- Tips -->
+            <div class="interpretation-box">
+              <h4>Pro Tips</h4>
+              <ul id="mud-tips">
+                <li>Let each coat dry completely (24 hours) before applying the next</li>
+                <li>Apply thinner coats for better results—thick coats crack</li>
+                <li>Sand lightly between coats with 120-150 grit sandpaper</li>
+              </ul>
+            </div>
+
+            <button class="print-btn" onclick="window.print()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              Print Results
+            </button>
+          </div>
+        </div>
+        
+        <!-- SCREWS PANEL -->
+        <div id="panel-screws" class="calc-panel">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="screws-sqft">Square Footage</label>
+              <div class="input-with-unit"><input type="number" id="screws-sqft" class="form-input" value="400" min="10"><span class="input-unit">sq ft</span></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Stud Spacing</label>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="stud-spacing" value="16" checked><span>16" on center</span></label>
+                <label class="radio-option"><input type="radio" name="stud-spacing" value="24"><span>24" on center</span></label>
+              </div>
+            </div>
+          </div>
+          <button class="calculate-btn" id="calc-screws-btn">Calculate Screws</button>
+          <div class="results-section" id="screws-results">
+            <div class="result-primary">
+              <div class="result-label">Screws Needed</div>
+              <div class="result-value" id="screws-total">--</div>
+              <div class="result-sublabel" id="screws-lbs">(-- lbs)</div>
+            </div>
+
+            <!-- Screws per sheet info -->
+            <div class="results-grid" style="grid-template-columns: repeat(2, 1fr);">
+              <div class="result-item">
+                <div class="result-item-label">Per 4×8 Sheet</div>
+                <div class="result-item-value" id="screws-per-sheet">~32</div>
+              </div>
+              <div class="result-item">
+                <div class="result-item-label">Stud Spacing</div>
+                <div class="result-item-value" id="screws-stud-display">16" OC</div>
+              </div>
+            </div>
+
+            <div class="materials-list">
+              <h4>What to Buy</h4>
+              <ul>
+                <li><span class="material-name">1-5/8" Coarse Thread</span><span class="material-qty" id="screws-boxes">--</span></li>
+              </ul>
+              <p style="font-size:0.8125rem;color:var(--gray-500);margin-top:0.5rem" id="screws-spacing">Based on 16" on-center stud spacing</p>
+            </div>
+
+            <!-- Tips -->
+            <div class="interpretation-box">
+              <h4>Screw Placement Guide</h4>
+              <ul>
+                <li><strong>Edges:</strong> Space screws 8" apart along panel edges</li>
+                <li><strong>Field:</strong> Space screws 12" apart in the center of panels</li>
+                <li><strong>Depth:</strong> Set screws just below surface without breaking paper</li>
+                <li><strong>Edge distance:</strong> Keep screws at least 3/8" from panel edges</li>
+              </ul>
+            </div>
+
+            <button class="print-btn" onclick="window.print()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              Print Results
+            </button>
+          </div>
+        </div>
+        
+        <!-- TAPE PANEL -->
+        <div id="panel-tape" class="calc-panel">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="tape-sqft">Square Footage</label>
+              <div class="input-with-unit"><input type="number" id="tape-sqft" class="form-input" value="400" min="10"><span class="input-unit">sq ft</span></div>
+            </div>
+            <div class="form-group">
+              <label class="checkbox-wrapper"><input type="checkbox" id="include-corners" checked><span class="checkbox-label">Include corner tape</span></label>
+            </div>
+          </div>
+          <button class="calculate-btn" id="calc-tape-btn">Calculate Tape</button>
+          <div class="results-section" id="tape-results">
+            <div class="result-primary">
+              <div class="result-label">Tape Needed</div>
+              <div class="result-value" id="tape-total">--</div>
+              <div class="result-sublabel" id="tape-corners">(with corners)</div>
+            </div>
+
+            <!-- Tape breakdown -->
+            <div class="results-grid" style="grid-template-columns: repeat(2, 1fr);">
+              <div class="result-item">
+                <div class="result-item-label">Flat Seams</div>
+                <div class="result-item-value" id="tape-flat">--</div>
+              </div>
+              <div class="result-item">
+                <div class="result-item-label">Corners</div>
+                <div class="result-item-value" id="tape-corner-ft">--</div>
+              </div>
+            </div>
+
+            <div class="materials-list">
+              <h4>What to Buy</h4>
+              <ul>
+                <li><span class="material-name">Paper Tape</span><span class="material-qty" id="tape-rolls">--</span></li>
+              </ul>
+            </div>
+
+            <!-- Tips -->
+            <div class="interpretation-box">
+              <h4>Taping Tips</h4>
+              <ul>
+                <li><strong>Paper tape:</strong> Best for corners and flat seams, requires bedding compound</li>
+                <li><strong>Mesh tape:</strong> Self-adhesive, good for patches but not corners</li>
+                <li><strong>Metal corner bead:</strong> Use for outside corners instead of tape</li>
+                <li><strong>Application:</strong> Apply compound first, then embed tape smoothly</li>
+              </ul>
+            </div>
+
+            <button class="print-btn" onclick="window.print()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              Print Results
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Content sections -->
+      <section class="content-section">
+        <h2>How to Calculate Drywall</h2>
+        <p>Measure your walls and ceilings, then divide by the sheet size. The <a href="https://www.gypsum.org/" target="_blank" rel="noopener noreferrer">Gypsum Association</a> recommends calculating each surface area separately for the most accurate estimates. Basic formula:</p>
+        <p><strong>Sheets = (Wall Area + Ceiling Area - Openings) × (1 + Waste%) ÷ Sheet Size</strong></p>
+        <p>For a 12'×10' room with 8' ceilings: Walls = 352 sq ft, Ceiling = 120 sq ft. Minus 2 doors and 1 window (~57 sq ft) = 415 sq ft. Add 10% waste = 457 sq ft. Divide by 32 sq ft per sheet = <strong>15 sheets</strong>.</p>
+      </section>
+      
+      <section class="content-section">
+        <h2>Drywall Sheet Sizes</h2>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead><tr><th>Size</th><th>Sq Ft</th><th>Best For</th><th>Weight</th></tr></thead>
+            <tbody>
+              <tr class="highlight"><td><strong>4'×8'</strong></td><td>32</td><td>Standard rooms, DIY</td><td>~54 lbs</td></tr>
+              <tr><td>4'×10'</td><td>40</td><td>Taller ceilings</td><td>~68 lbs</td></tr>
+              <tr><td>4'×12'</td><td>48</td><td>Professional, long walls</td><td>~81 lbs</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="source-note">Sheet specifications per <a href="https://www.astm.org/" target="_blank" rel="noopener noreferrer">ASTM C1396</a> standard for gypsum board products.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>How to Use This Calculator</h2>
+        <p>This calculator includes five specialized tabs for estimating different drywall materials. Here's how to use each one effectively.</p>
+
+        <h3>Sheets Tab: Calculating Drywall Quantity</h3>
+        <ol>
+          <li><strong>Measure your room dimensions.</strong> Use a tape measure to get the length, width, and ceiling height in feet. Measure at floor level for length and width, and from floor to ceiling for height.</li>
+          <li><strong>Enter the dimensions.</strong> Input your room length, width, and ceiling height into the corresponding fields.</li>
+          <li><strong>Select coverage areas.</strong> Check "Walls" if you're drywalling the walls, "Ceiling" if you're covering the ceiling, or both. Uncheck areas you're not covering.</li>
+          <li><strong>Count your openings.</strong> Enter the number of standard doors (calculated at 21 sq ft each) and windows (15 sq ft each). For non-standard openings like pass-throughs or large closets, enter the total square footage in "Other."</li>
+          <li><strong>Choose your sheet size.</strong> 4'×8' sheets are most common and easiest to handle alone. 4'×10' and 4'×12' sheets reduce seams but require two people to carry and install.</li>
+          <li><strong>Set your waste factor.</strong> The default 10% works for typical rectangular rooms. Increase to 15-20% for rooms with many corners, angles, or cutouts. Decrease to 5-7% for simple, open spaces.</li>
+          <li><strong>Click "Calculate Sheets Needed."</strong> Review your results, including the complete shopping list for all materials.</li>
+        </ol>
+
+        <h3>Cost Tab: Estimating Project Expenses</h3>
+        <ol>
+          <li><strong>Enter square footage.</strong> Use the total from the Sheets tab, or enter your known square footage directly.</li>
+          <li><strong>Select project type.</strong> Choose "DIY" for materials-only estimates, or "Professional install" to include labor costs.</li>
+          <li><strong>Pick your finish level.</strong> Level 0-2 is basic (garage, utility rooms). Level 3 is standard (most residential). Level 4 is smooth (visible walls). Level 5 is premium (high-gloss paint, critical lighting).</li>
+          <li><strong>Review the cost range.</strong> The calculator provides low and high estimates reflecting regional price variations. Verify current prices at <a href="https://www.homedepot.com/" target="_blank" rel="noopener noreferrer">Home Depot</a> or <a href="https://www.lowes.com/" target="_blank" rel="noopener noreferrer">Lowe's</a> for your area.</li>
+        </ol>
+
+        <h3>Mud Tab: Joint Compound Quantities</h3>
+        <ol>
+          <li><strong>Enter your square footage.</strong></li>
+          <li><strong>Select compound type.</strong> All-Purpose works for most applications. Topping is for final coats only. Setting compound dries faster but requires more skill.</li>
+          <li><strong>Choose number of coats.</strong> Three coats is standard for a Level 4 finish. Use fewer for basic finishes, more for Level 5.</li>
+          <li><strong>Check the bucket quantities.</strong> The calculator shows how many 5-gallon and 1-gallon containers to purchase.</li>
+        </ol>
+
+        <h3>Screws Tab: Fastener Quantities</h3>
+        <ol>
+          <li><strong>Enter square footage.</strong></li>
+          <li><strong>Select stud spacing.</strong> Most residential construction uses 16" on-center per <a href="https://www.iccsafe.org/" target="_blank" rel="noopener noreferrer">ICC building codes</a>. Older homes or commercial buildings may use 24" on-center.</li>
+          <li><strong>Note the box quantities.</strong> Screws are sold by weight; the calculator converts to 5-lb box quantities for easy purchasing.</li>
+        </ol>
+
+        <h3>Tape Tab: Paper Tape Requirements</h3>
+        <ol>
+          <li><strong>Enter square footage.</strong></li>
+          <li><strong>Choose corner tape option.</strong> Check this to include tape for inside corners and ceiling edges. Uncheck for flat seams only.</li>
+          <li><strong>Review roll quantities.</strong> Paper tape comes in 75-ft, 250-ft, and 500-ft rolls.</li>
+        </ol>
+
+        <h3>Tips for Accurate Results</h3>
+        <ul>
+          <li><strong>Measure twice.</strong> Double-check all dimensions before entering them.</li>
+          <li><strong>Round up slightly.</strong> If a room is 11'8", enter 12' to ensure adequate materials.</li>
+          <li><strong>Don't forget closets.</strong> Include closet interiors if you're drywalling them.</li>
+          <li><strong>Consider ceiling height.</strong> Standard is 8', but many homes have 9' or 10' ceilings.</li>
+          <li><strong>Account for complexity.</strong> Increase waste factor for bathrooms, kitchens, or rooms with many electrical boxes.</li>
+        </ul>
+
+        <h3>Common Mistakes to Avoid</h3>
+        <ul>
+          <li><strong>Forgetting the ceiling.</strong> Many first-time estimators calculate only walls.</li>
+          <li><strong>Underestimating waste.</strong> Cuts around outlets, windows, and corners generate significant scrap.</li>
+          <li><strong>Ignoring sheet size limits.</strong> Larger sheets are more efficient but may not fit through doorways or up stairs.</li>
+          <li><strong>Calculating rooms separately.</strong> If drywalling multiple rooms, calculate each one and add totals—don't average.</li>
+          <li><strong>Buying exact quantities.</strong> Always round up to the nearest full unit and buy 1-2 extra sheets for mistakes.</li>
+        </ul>
+
+        <div class="pro-tip" style="background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%);border:1px solid #bae6fd;padding:1.25rem 1.5rem;border-radius:0.5rem;margin-top:1.5rem">
+          <h4 style="margin:0 0 0.5rem 0;font-size:0.9375rem;color:#0369a1">Pro Tip: Delivery vs. Pickup</h4>
+          <p style="margin:0;color:#0c4a6e;font-size:0.9375rem">Drywall is heavy (54 lbs per 4'×8' sheet) and breaks easily. If you need more than 10 sheets, consider delivery—it often costs $50-100 and saves your vehicle and your back. Many stores offer free delivery on orders over $400.</p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Real-World Examples</h2>
+        <p>See how different projects use the calculator with actual numbers based on the formulas.</p>
+
+        <h3>Example 1: Standard Bedroom Renovation</h3>
+        <p><strong>Scenario:</strong> Maria is renovating a 12' × 10' bedroom with 8' ceilings. The room has one standard door and two windows. She's doing the work herself and wants a standard Level 3 finish.</p>
+        <p><strong>Inputs:</strong> Length: 12 ft, Width: 10 ft, Height: 8 ft, Walls and ceiling checked, 1 door, 2 windows, 4'×8' sheets, 10% waste.</p>
+        <p><strong>Calculations:</strong></p>
+        <ul>
+          <li>Wall perimeter: 2 × (12 + 10) = 44 ft</li>
+          <li>Wall area: 44 × 8 = 352 sq ft</li>
+          <li>Ceiling area: 12 × 10 = 120 sq ft</li>
+          <li>Openings: 1 door (21 sq ft) + 2 windows (30 sq ft) = 51 sq ft</li>
+          <li>Net area: 352 - 51 + 120 = 421 sq ft</li>
+          <li>With 10% waste: 421 × 1.10 = 463 sq ft</li>
+          <li>Sheets needed: 463 ÷ 32 = 15 sheets (rounded up)</li>
+        </ul>
+        <p><strong>Results:</strong> 15 sheets of 4'×8' drywall, approximately 6 gallons of joint compound, 126 ft of tape, and 421 screws. Estimated DIY materials cost: $188-$273.</p>
+
+        <h3>Example 2: Basement Finishing Project</h3>
+        <p><strong>Scenario:</strong> James is finishing a 24' × 20' basement with 7.5' ceilings. The space has three small windows (12 sq ft each instead of standard), one door to the stairs, and one door to a bathroom. He plans to hire a professional for Level 4 finish quality.</p>
+        <p><strong>Inputs:</strong> Length: 24 ft, Width: 20 ft, Height: 7.5 ft (enter 8), Walls and ceiling, 2 doors, 0 standard windows, 36 sq ft in "Other" for small windows, 4'×12' sheets for fewer seams, 12% waste (basement complexity).</p>
+        <p><strong>Calculations:</strong></p>
+        <ul>
+          <li>Wall perimeter: 2 × (24 + 20) = 88 ft</li>
+          <li>Wall area: 88 × 8 = 704 sq ft</li>
+          <li>Ceiling area: 24 × 20 = 480 sq ft</li>
+          <li>Openings: 2 doors (42 sq ft) + 36 sq ft other = 78 sq ft</li>
+          <li>Net area: 704 - 78 + 480 = 1,106 sq ft</li>
+          <li>With 12% waste: 1,106 × 1.12 = 1,239 sq ft</li>
+          <li>Sheets needed: 1,239 ÷ 48 = 26 sheets (4'×12')</li>
+        </ul>
+        <p><strong>Results:</strong> 26 sheets of 4'×12' drywall. Professional Level 4 installation: $2,212-$3,042 total including materials and labor.</p>
+
+        <h3>Example 3: Small Bathroom Remodel</h3>
+        <p><strong>Scenario:</strong> David is replacing water-damaged drywall in a 6' × 8' bathroom with 8' ceilings. He's only doing the walls (ceiling is fine) and needs moisture-resistant drywall. One door, no windows.</p>
+        <p><strong>Inputs:</strong> Length: 6 ft, Width: 8 ft, Height: 8 ft, Walls only (ceiling unchecked), 1 door, 0 windows, 4'×8' sheets, 15% waste (small room = more cuts).</p>
+        <p><strong>Calculations:</strong></p>
+        <ul>
+          <li>Wall perimeter: 2 × (6 + 8) = 28 ft</li>
+          <li>Wall area: 28 × 8 = 224 sq ft</li>
+          <li>Openings: 1 door = 21 sq ft</li>
+          <li>Net area: 224 - 21 = 203 sq ft</li>
+          <li>With 15% waste: 203 × 1.15 = 233 sq ft</li>
+          <li>Sheets needed: 233 ÷ 32 = 8 sheets</li>
+        </ul>
+        <p><strong>Results:</strong> 8 sheets of 4'×8' moisture-resistant drywall. Note: Use green board or purple board rated for high-moisture areas.</p>
+
+        <h3>Example 4: Open-Plan Living Area</h3>
+        <p><strong>Scenario:</strong> The Johnsons are building a new 28' × 18' great room with 10' ceilings. The space has a large sliding door (50 sq ft), two standard windows, and opens to the kitchen (no door). They're using 4'×12' sheets to minimize seams on the tall walls.</p>
+        <p><strong>Inputs:</strong> Length: 28 ft, Width: 18 ft, Height: 10 ft, Walls and ceiling, 0 doors, 2 windows, 50 sq ft in "Other" for slider, 4'×12' sheets, 10% waste.</p>
+        <p><strong>Calculations:</strong></p>
+        <ul>
+          <li>Wall perimeter: 2 × (28 + 18) = 92 ft</li>
+          <li>Wall area: 92 × 10 = 920 sq ft</li>
+          <li>Ceiling area: 28 × 18 = 504 sq ft</li>
+          <li>Openings: 2 windows (30 sq ft) + 50 sq ft slider = 80 sq ft</li>
+          <li>Net area: 920 - 80 + 504 = 1,344 sq ft</li>
+          <li>With 10% waste: 1,344 × 1.10 = 1,478 sq ft</li>
+          <li>Sheets needed: 1,478 ÷ 48 = 31 sheets</li>
+        </ul>
+        <p><strong>Results:</strong> 31 sheets of 4'×12' drywall, 20 gallons of compound, 403 ft of tape, 1,344 screws.</p>
+
+        <h3>Example 5: Garage Conversion</h3>
+        <p><strong>Scenario:</strong> Alex is converting a 20' × 22' two-car garage into a home office. The space has 9' ceilings, one large garage door opening being walled in (150 sq ft), one entry door, and no windows (will add later). Using fire-rated 5/8" drywall per code.</p>
+        <p><strong>Inputs:</strong> Length: 20 ft, Width: 22 ft, Height: 9 ft, Walls and ceiling, 1 door, 0 windows, 0 sq ft in "Other" (garage door is being covered, not subtracted), 4'×8' sheets, 10% waste.</p>
+        <p><strong>Calculations:</strong></p>
+        <ul>
+          <li>Wall perimeter: 2 × (20 + 22) = 84 ft</li>
+          <li>Wall area: 84 × 9 = 756 sq ft</li>
+          <li>Ceiling area: 20 × 22 = 440 sq ft</li>
+          <li>Openings: 1 door = 21 sq ft</li>
+          <li>Net area: 756 - 21 + 440 = 1,175 sq ft</li>
+          <li>With 10% waste: 1,175 × 1.10 = 1,293 sq ft</li>
+          <li>Sheets needed: 1,293 ÷ 32 = 41 sheets</li>
+        </ul>
+        <p><strong>Results:</strong> 41 sheets of 4'×8' Type X (fire-rated) drywall. Materials cost estimate: $472-$685 for DIY.</p>
+
+        <h3>Example 6: Contractor Whole-House Estimate</h3>
+        <p><strong>Scenario:</strong> A contractor is bidding on a new construction home with 2,400 sq ft of drywall area (already calculated by the architect). Standard 8' ceilings throughout, Level 3 finish, professional installation.</p>
+        <p><strong>Using Cost Tab:</strong> Enter 2,400 sq ft, select "Professional install," choose "Level 3 (standard)."</p>
+        <p><strong>Results:</strong></p>
+        <ul>
+          <li>Materials: $960-$1,392</li>
+          <li>Labor (Level 3): $3,600-$5,400</li>
+          <li>Total estimate: $4,560-$6,792</li>
+          <li>Per square foot: $1.90-$2.83</li>
+        </ul>
+        <p>The contractor can use this range as a starting point, then adjust based on local labor rates and material suppliers.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>When to Use This Calculator</h2>
+        <p>This drywall calculator is designed to help with material estimation in a variety of situations. Here's when it's most useful:</p>
+
+        <h3>Ideal Use Cases</h3>
+        <ul>
+          <li><strong>DIY home renovation.</strong> Planning a bedroom, basement, or garage project? Get accurate material lists before your hardware store trip.</li>
+          <li><strong>Budgeting a project.</strong> Use the cost estimator to understand expense ranges before committing to work.</li>
+          <li><strong>Comparing DIY vs. professional costs.</strong> See the difference between materials-only and full installation pricing.</li>
+          <li><strong>Creating shopping lists.</strong> The Sheets tab generates a complete list including compound, tape, and screws.</li>
+          <li><strong>Verifying contractor bids.</strong> Check that quoted material quantities are reasonable for your space.</li>
+          <li><strong>Planning room additions.</strong> Estimate drywall needs when designing new living space.</li>
+          <li><strong>Water damage repair.</strong> Calculate materials needed to replace damaged sections.</li>
+          <li><strong>Finishing unfinished spaces.</strong> Basements, attics, and bonus rooms often need complete drywall installation.</li>
+        </ul>
+
+        <h3>Who Benefits Most</h3>
+        <ul>
+          <li><strong>First-time DIYers</strong> who need guidance on quantities and materials.</li>
+          <li><strong>Homeowners</strong> planning renovations and setting budgets.</li>
+          <li><strong>Contractors</strong> preparing quick estimates for client quotes.</li>
+          <li><strong>Property managers</strong> budgeting for rental property repairs.</li>
+          <li><strong>Real estate investors</strong> estimating renovation costs for potential purchases.</li>
+        </ul>
+
+        <h3>Important Considerations</h3>
+        <p>While this calculator provides reliable estimates, remember that:</p>
+        <ul>
+          <li>Complex room shapes may require additional materials beyond the estimate.</li>
+          <li>Local material and labor costs vary significantly by region.</li>
+          <li>Fire-rated, moisture-resistant, and specialty drywall cost more than standard.</li>
+          <li>Professional installation includes prep work, delivery, and cleanup not reflected in materials-only estimates.</li>
+          <li>Always consult local building codes for thickness and type requirements.</li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2>Quick Reference Tables</h2>
+        <p>Use these reference tables for quick estimates and to verify your calculator results.</p>
+
+        <h3>Drywall Coverage by Sheet Size</h3>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead><tr><th>Sheet Size</th><th>Coverage</th><th>Sheets per 100 sq ft</th><th>Weight (1/2")</th><th>Weight (5/8")</th></tr></thead>
+            <tbody>
+              <tr class="highlight"><td><strong>4' × 8'</strong></td><td>32 sq ft</td><td>3.2 sheets</td><td>~54 lbs</td><td>~70 lbs</td></tr>
+              <tr><td>4' × 10'</td><td>40 sq ft</td><td>2.5 sheets</td><td>~68 lbs</td><td>~88 lbs</td></tr>
+              <tr><td>4' × 12'</td><td>48 sq ft</td><td>2.1 sheets</td><td>~81 lbs</td><td>~105 lbs</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Joint Compound Coverage Rates</h3>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead><tr><th>Compound Type</th><th>Coverage per Gallon</th><th>Gallons per 100 sq ft</th><th>Best For</th></tr></thead>
+            <tbody>
+              <tr class="highlight"><td><strong>All-Purpose</strong></td><td>~20 sq ft per coat</td><td>5 gal (3 coats)</td><td>Taping, bedding, finishing</td></tr>
+              <tr><td>Topping</td><td>~33 sq ft per coat</td><td>3 gal (3 coats)</td><td>Final coats only</td></tr>
+              <tr><td>Setting</td><td>~25 sq ft per coat</td><td>4 gal (3 coats)</td><td>Fast drying, repairs</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Screw Requirements by Stud Spacing</h3>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead><tr><th>Stud Spacing</th><th>Screws per sq ft</th><th>Screws per 4×8 Sheet</th><th>5-lb Box Coverage</th></tr></thead>
+            <tbody>
+              <tr class="highlight"><td><strong>16" on center</strong></td><td>1.0 screw</td><td>32 screws</td><td>~660 sq ft</td></tr>
+              <tr><td>24" on center</td><td>0.75 screws</td><td>24 screws</td><td>~880 sq ft</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><em>Note: A 5-lb box contains approximately 660 screws (1-5/8" coarse thread).</em></p>
+
+        <h3>Paper Tape Requirements</h3>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead><tr><th>Area</th><th>Flat Seams Only</th><th>With Corners</th><th>75-ft Roll Coverage</th></tr></thead>
+            <tbody>
+              <tr><td>100 sq ft</td><td>30 linear ft</td><td>45-60 linear ft</td><td>~250 sq ft</td></tr>
+              <tr><td>500 sq ft</td><td>150 linear ft</td><td>225-300 linear ft</td><td>1-2 rolls</td></tr>
+              <tr class="highlight"><td><strong>1,000 sq ft</strong></td><td>300 linear ft</td><td>450-600 linear ft</td><td>4-5 rolls</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Formula Reference</h2>
+        <p>Understand the math behind the calculator with these formulas and worked examples.</p>
+
+        <h3>Wall Area Calculation</h3>
+        <p><strong>Formula:</strong> Wall Area = 2 × (Length + Width) × Height</p>
+        <p><strong>Example:</strong> Room is 12' × 10' with 8' ceilings</p>
+        <ul>
+          <li>Perimeter = 2 × (12 + 10) = 44 feet</li>
+          <li>Wall area = 44 × 8 = <strong>352 sq ft</strong></li>
+        </ul>
+
+        <h3>Ceiling Area Calculation</h3>
+        <p><strong>Formula:</strong> Ceiling Area = Length × Width</p>
+        <p><strong>Example:</strong> Room is 12' × 10'</p>
+        <ul>
+          <li>Ceiling area = 12 × 10 = <strong>120 sq ft</strong></li>
+        </ul>
+
+        <h3>Standard Opening Deductions</h3>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead><tr><th>Opening Type</th><th>Standard Deduction</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>Interior door</td><td>21 sq ft</td><td>Assumes 3' × 7' opening</td></tr>
+              <tr><td>Standard window</td><td>15 sq ft</td><td>Assumes 3' × 5' opening</td></tr>
+              <tr><td>Sliding glass door</td><td>40-60 sq ft</td><td>Enter in "Other" field</td></tr>
+              <tr><td>Large picture window</td><td>20-35 sq ft</td><td>Enter in "Other" field</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Total Sheets Formula</h3>
+        <p><strong>Formula:</strong> Sheets = ⌈(Total Area × Waste Factor) ÷ Sheet Size⌉</p>
+        <p><strong>Example:</strong> 421 sq ft with 10% waste using 4'×8' sheets</p>
+        <ul>
+          <li>With waste = 421 × 1.10 = 463 sq ft</li>
+          <li>Sheets = 463 ÷ 32 = 14.47</li>
+          <li>Round up = <strong>15 sheets</strong></li>
+        </ul>
+
+        <h3>Joint Compound Formula</h3>
+        <p><strong>Formula:</strong> Gallons = (Square Footage × Coverage Rate) × Number of Coats</p>
+        <p><strong>Coverage Rates:</strong></p>
+        <ul>
+          <li>All-Purpose: 0.05 gallons per sq ft per coat (20 sq ft coverage per gallon)</li>
+          <li>Topping: 0.03 gallons per sq ft per coat (33 sq ft coverage per gallon)</li>
+          <li>Setting: 0.04 gallons per sq ft per coat (25 sq ft coverage per gallon)</li>
+        </ul>
+        <p><strong>Example:</strong> 400 sq ft with All-Purpose, 3 coats</p>
+        <ul>
+          <li>Per coat = 400 × 0.05 = 20 gallons total</li>
+          <li>Total = 20 ÷ 3 coats displayed as ~6.7 gallons per coat</li>
+          <li>Purchase: 4× 5-gallon buckets (20 gallons)</li>
+        </ul>
+
+        <h3>Screw Calculation Formula</h3>
+        <p><strong>Formula:</strong> Screws = Square Footage × Screws Per Sq Ft</p>
+        <p><strong>Rates:</strong> 16" OC = 1.0 screw/sq ft | 24" OC = 0.75 screws/sq ft</p>
+        <p><strong>Example:</strong> 400 sq ft with 16" on-center studs</p>
+        <ul>
+          <li>Screws = 400 × 1.0 = <strong>400 screws</strong></li>
+          <li>Weight: 400 ÷ 660 × 5 = 3.0 lbs</li>
+          <li>Purchase: 1× 5-lb box</li>
+        </ul>
+
+        <h3>Tape Calculation Formula</h3>
+        <p><strong>Formula:</strong> Tape (linear ft) = Square Footage × 0.3</p>
+        <p><strong>Example:</strong> 400 sq ft (flat seams only)</p>
+        <ul>
+          <li>Tape = 400 × 0.3 = <strong>120 linear feet</strong></li>
+          <li>75-ft rolls needed = 120 ÷ 75 = 2 rolls</li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2>Understanding Your Results</h2>
+        <p>Here's how to interpret the calculator output and make purchasing decisions.</p>
+
+        <h3>Reading the Sheets Calculator Results</h3>
+        <ul>
+          <li><strong>Total Sheets Needed:</strong> The primary result—how many full sheets to buy. This number is already rounded up.</li>
+          <li><strong>Wall Area / Ceiling Area:</strong> Breakdown showing square footage for each surface before deductions.</li>
+          <li><strong>Total with Waste:</strong> The final square footage used for calculations, including your selected waste percentage.</li>
+          <li><strong>Shopping List:</strong> A complete materials list based on your project size, including estimated compound, tape, and screws.</li>
+        </ul>
+
+        <h3>Cost Estimate Interpretation</h3>
+        <ul>
+          <li><strong>Materials Range:</strong> The low-to-high estimate for drywall, compound, tape, and fasteners. Actual prices depend on your location and supplier.</li>
+          <li><strong>Labor Range:</strong> Professional installation costs, which vary by region and finish level. Urban areas typically cost more than rural.</li>
+          <li><strong>Per Square Foot Cost:</strong> Useful for comparing to contractor quotes. If a bid is significantly higher or lower, ask why.</li>
+        </ul>
+
+        <h3>Waste Factor Guidelines</h3>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead><tr><th>Room Type</th><th>Recommended Waste</th><th>Reason</th></tr></thead>
+            <tbody>
+              <tr><td>Simple rectangle</td><td>5-7%</td><td>Minimal cuts, few outlets</td></tr>
+              <tr class="highlight"><td><strong>Standard room</strong></td><td>10%</td><td>Typical doors, windows, outlets</td></tr>
+              <tr><td>Complex layout</td><td>12-15%</td><td>Multiple corners, soffits, angles</td></tr>
+              <tr><td>Bathroom/Kitchen</td><td>15-20%</td><td>Many cutouts for plumbing, electrical</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>When to Buy Extra</h3>
+        <ul>
+          <li><strong>First-time installers:</strong> Add 1-2 extra sheets beyond the calculated amount for learning mistakes.</li>
+          <li><strong>Unknown wall conditions:</strong> Older homes may reveal surprises requiring additional materials.</li>
+          <li><strong>Future repairs:</strong> Having matching material stored makes patching easier later.</li>
+          <li><strong>Transportation damage:</strong> Some sheets may arrive damaged or break during handling.</li>
+        </ul>
+
+        <div class="pro-tip" style="background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%);border:1px solid #bae6fd;padding:1.25rem 1.5rem;border-radius:0.5rem;margin-top:1.5rem">
+          <h4 style="margin:0 0 0.5rem 0;font-size:0.9375rem;color:#0369a1">Pro Tip: Check Return Policies</h4>
+          <p style="margin:0;color:#0c4a6e;font-size:0.9375rem">Most home improvement stores accept returns on unused drywall. Buy a few extra sheets for peace of mind—you can return them if they're not needed. Just keep your receipt and don't remove protective paper from the edges.</p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Drywall Type Comparison</h2>
+        <p>Choose the right drywall type for your project based on location and requirements.</p>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead><tr><th>Type</th><th>Also Called</th><th>Best Uses</th><th>Cost vs. Standard</th></tr></thead>
+            <tbody>
+              <tr class="highlight"><td><strong>Standard (White)</strong></td><td>Regular, whiteboard</td><td>Living rooms, bedrooms, hallways</td><td>Baseline</td></tr>
+              <tr><td>Moisture-Resistant (Green)</td><td>Greenboard, MR board</td><td>Bathrooms, kitchens, laundry</td><td>+15-20%</td></tr>
+              <tr><td>Mold-Resistant (Purple)</td><td>Purple board</td><td>High-humidity areas, basements</td><td>+25-30%</td></tr>
+              <tr><td>Fire-Resistant (Type X)</td><td>Firecode, fire-rated</td><td>Garages, furnace rooms, required by code</td><td>+10-15%</td></tr>
+              <tr><td>Soundproof</td><td>QuietRock, sound-deadening</td><td>Home theaters, bedrooms, offices</td><td>+100-200%</td></tr>
+              <tr><td>Abuse-Resistant</td><td>Impact-resistant</td><td>Garages, kids' rooms, high-traffic areas</td><td>+50-75%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="source-note">Product data compiled from <a href="https://www.usg.com/" target="_blank" rel="noopener noreferrer">USG</a>, <a href="https://www.certainteed.com/" target="_blank" rel="noopener noreferrer">CertainTeed</a>, and other major manufacturers.</p>
+
+        <h3>Thickness Selection Guide</h3>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead><tr><th>Thickness</th><th>Common Uses</th><th>Pros</th><th>Cons</th></tr></thead>
+            <tbody>
+              <tr><td>1/4"</td><td>Curved walls, covering old surfaces</td><td>Flexible, lightweight</td><td>Not structural, requires backing</td></tr>
+              <tr><td>3/8"</td><td>Repair patches, mobile homes</td><td>Lighter than 1/2"</td><td>Limited availability</td></tr>
+              <tr class="highlight"><td><strong>1/2"</strong></td><td>Most walls and ceilings</td><td>Standard, widely available</td><td>May sag on 24" OC ceilings</td></tr>
+              <tr><td>5/8"</td><td>Ceilings, fire-rated applications</td><td>Sag-resistant, fire rating</td><td>Heavier, more expensive</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Finish Level Comparison</h3>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead><tr><th>Level</th><th>Description</th><th>Typical Use</th><th>Coats Required</th></tr></thead>
+            <tbody>
+              <tr><td>Level 0</td><td>No taping or finishing</td><td>Temporary construction, hidden areas</td><td>0</td></tr>
+              <tr><td>Level 1</td><td>Tape embedded in compound</td><td>Above ceilings, in plenums</td><td>1</td></tr>
+              <tr><td>Level 2</td><td>One coat over tape</td><td>Garages, utility areas, behind tile</td><td>2</td></tr>
+              <tr><td>Level 3</td><td>Two coats, no sanding</td><td>Areas receiving heavy texture</td><td>2</td></tr>
+              <tr class="highlight"><td><strong>Level 4</strong></td><td>Standard smooth finish</td><td>Most residential applications</td><td>3</td></tr>
+              <tr><td>Level 5</td><td>Skim coat entire surface</td><td>High-gloss paint, critical lighting</td><td>4-5</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="source-note">Finish levels defined by <a href="https://www.gypsum.org/" target="_blank" rel="noopener noreferrer">Gypsum Association</a> standard GA-214.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Related Guides</h2>
+        <p>Explore our in-depth articles for more detailed information on drywall projects.</p>
+        <div class="related-guides-grid">
+          <div class="related-guide">
+            <h4><a href="/blog/how-to-calculate-drywall-square-footage/">How to Calculate Drywall Square Footage</a></h4>
+            <p>Step-by-step guide to measuring walls and ceilings accurately for your drywall project.</p>
+          </div>
+          <div class="related-guide">
+            <h4><a href="/blog/drywall-installation-cost-guide/">Drywall Installation Cost Guide</a></h4>
+            <p>Complete breakdown of materials and labor costs for DIY and professional installation.</p>
+          </div>
+          <div class="related-guide">
+            <h4><a href="/blog/how-much-joint-compound-do-i-need/">How Much Joint Compound Do I Need?</a></h4>
+            <p>Coverage rates, compound types, and tips for buying the right amount of mud.</p>
+          </div>
+          <div class="related-guide">
+            <h4><a href="/blog/drywall-finish-levels-explained/">Drywall Finish Levels Explained</a></h4>
+            <p>Understanding Levels 0-5 and choosing the right finish for each room.</p>
+          </div>
+          <div class="related-guide">
+            <h4><a href="/blog/drywall-sheet-sizes-guide/">Drywall Sheet Sizes Guide</a></h4>
+            <p>Comparing 4x8, 4x10, and 4x12 sheets—which size is right for your project?</p>
+          </div>
+          <div class="related-guide">
+            <h4><a href="/blog/drywall-screw-spacing-guide/">Drywall Screw Spacing Guide</a></h4>
+            <p>Proper screw placement for walls and ceilings with different stud spacing.</p>
+          </div>
+          <div class="related-guide">
+            <h4><a href="/blog/hanging-drywall-on-ceiling-tips/">Hanging Drywall on Ceiling Tips</a></h4>
+            <p>Techniques, tools, and tricks for installing ceiling drywall like a pro.</p>
+          </div>
+          <div class="related-guide">
+            <h4><a href="/blog/home-depot-vs-lowes-drywall-prices/">Home Depot vs Lowes Drywall Prices</a></h4>
+            <p>Price comparison and buying tips for the two major home improvement stores.</p>
+          </div>
+          <div class="related-guide">
+            <h4><a href="/blog/drywall-repair-cost-estimator/">Drywall Repair Cost Estimator</a></h4>
+            <p>Cost estimates for common repairs from nail holes to water damage.</p>
+          </div>
+          <div class="related-guide">
+            <h4><a href="/blog/drywall-vs-sheetrock-difference/">Drywall vs Sheetrock: What's the Difference?</a></h4>
+            <p>Understanding brand names vs generic terms when shopping for materials.</p>
+          </div>
+        </div>
+        <p style="margin-top:1.5rem"><a href="/blog/">View all articles →</a></p>
+      </section>
+
+      <section class="content-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">How many sheets for a 12×12 room?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer"><p>About 17 sheets (4'×8') for walls and ceiling with 10% waste. Here's the math: walls = 384 sq ft, ceiling = 144 sq ft, total = 528 sq ft. With 10% waste = 581 sq ft ÷ 32 = 18 sheets. For detailed calculations, see our <a href="/blog/how-to-calculate-drywall-square-footage/">square footage guide</a>.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How much does drywall cost per sq ft?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer"><p>Materials cost $0.30-$0.50 per square foot for standard 1/2" drywall, compound, screws, and tape. Professional installation adds $1.50-$3.00 per square foot for labor, depending on finish level and region. Read our complete <a href="/blog/drywall-installation-cost-guide/">cost breakdown guide</a> for detailed pricing.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How much joint compound do I need?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer"><p>Plan for about 1 gallon per 100 sq ft for a standard 3-coat finish. A 5-gallon bucket covers 400-500 sq ft. All-Purpose compound works for most DIY projects. See our <a href="/blog/how-much-joint-compound-do-i-need/">joint compound guide</a> for coverage rates by compound type.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How many screws per sheet of drywall?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer"><p>28-32 screws per 4'×8' sheet with 16" on-center stud spacing. Place screws 8" apart on edges and 12" apart in the field. With 24" stud spacing, you'll use about 24 screws per sheet. Our <a href="/blog/drywall-screw-spacing-guide/">screw spacing guide</a> covers proper placement in detail.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Should I use 1/2" or 5/8" drywall for ceilings?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer"><p>Use 1/2" drywall for ceilings with 16" on-center joists. For 24" joist spacing, use 5/8" to prevent sagging. Fire-rated Type X (5/8") is required for garage ceilings in most jurisdictions. Learn more in our <a href="/blog/hanging-drywall-on-ceiling-tips/">ceiling installation guide</a>.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What's the difference between drywall and sheetrock?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer"><p>Sheetrock is a brand name owned by USG Corporation, while drywall is the generic term for gypsum wallboard. They're functionally identical—Sheetrock is simply the most recognized brand, similar to how Kleenex refers to tissues. See our <a href="/blog/drywall-vs-sheetrock-difference/">drywall vs sheetrock comparison</a>.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What finish level do I need?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer"><p>Most homes use Level 4 (standard smooth finish) for living areas. Level 3 is acceptable for textured walls or behind cabinets. Level 5 is needed for high-gloss paint or areas with critical lighting. Garages often use Level 2. Our <a href="/blog/drywall-finish-levels-explained/">finish levels guide</a> explains each level in detail.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How do I repair damaged drywall?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer"><p>Small holes (under 6") can be patched with mesh tape and compound. Larger damage requires cutting out the damaged section and installing a new piece. Water damage often requires removing to the studs and replacing. Our <a href="/blog/drywall-repair-cost-estimator/">repair cost estimator</a> helps you budget for common repairs.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Which sheet size should I use?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer"><p>4'×8' sheets are best for DIYers—they're lighter and easier to maneuver. 4'×12' sheets create fewer seams but weigh 81+ lbs and usually need two people. For 9' or 10' ceilings, 4'×10' sheets can eliminate horizontal seams. Our <a href="/blog/drywall-sheet-sizes-guide/">sheet size guide</a> covers the pros and cons of each option.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Where can I get the best price on drywall?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer"><p>Big box stores (Home Depot, Lowes) offer competitive prices and convenience. Building supply yards often have better bulk pricing. Always compare per-sheet prices and check for delivery fees—drywall is heavy and fragile. See our <a href="/blog/home-depot-vs-lowes-drywall-prices/">Home Depot vs Lowes price comparison</a>.</p></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo"><svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg><span>Drywall Calculator</span></a>
+          <p>Free calculator to estimate drywall materials for your project.</p>
+        </div>
+        <div class="footer-nav"><h4>Links</h4><ul><li><a href="/">Calculator</a></li><li><a href="/blog/">Articles</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+        <div class="footer-nav"><h4>Legal</h4><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025-2026 Drywall Calculator. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="/assets/js/calculator.js"></script>
+</body>
+</html>
